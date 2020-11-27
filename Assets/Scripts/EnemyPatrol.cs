@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemiesPatrol : MonoBehaviour
+public class EnemyPatrol : MonoBehaviour
 {
     [SerializeField] private Transform _path;
     [SerializeField] private float _speed;
@@ -18,7 +18,7 @@ public class EnemiesPatrol : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         Transform target = _points[_currentPoint];
 

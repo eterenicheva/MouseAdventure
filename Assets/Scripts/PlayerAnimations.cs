@@ -6,7 +6,7 @@ using DG.Tweening;
 public class PlayerAnimations : PlayerController
 {
     private Animator _animator;
-    public PlayerController _playerController;
+    private PlayerController _playerController;
     
     
     private void Start()
@@ -18,7 +18,6 @@ public class PlayerAnimations : PlayerController
     private void Update()
     {
         float directionX = _playerController.Velocity.x;
-        float directionY = _playerController.Velocity.y;
         if (directionX == 0)
             _animator.SetInteger("State", 1);
         if (directionX != 0)

@@ -6,9 +6,9 @@ public class Player : MonoBehaviour
 {
     private int _coins;
 
-    public void CountCoin(int count)
+    public void CountCoin()
     {
-        _coins += count;
-        Debug.Log(_coins);
+        _coins ++;
     }
+
 }

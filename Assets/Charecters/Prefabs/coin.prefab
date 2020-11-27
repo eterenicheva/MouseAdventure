@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6301048168436271264}
   m_Layer: 0
   m_Name: coin
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,4 +132,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b43d448d0d0594297d01e011376a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spawnCoin: {fileID: 6301048168436271295}
   _waitTime: 5
