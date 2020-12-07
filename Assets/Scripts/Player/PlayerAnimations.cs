@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class PlayerAnimations : PlayerController
+[RequireComponent(typeof(PlayerController))]
+public class PlayerAnimations : MonoBehaviour
 {
     private Animator _animator;
     private PlayerController _playerController;
@@ -25,7 +26,7 @@ public class PlayerAnimations : PlayerController
             _animator.SetInteger("State", 2);
             Flip(directionX);
         }
-        if (!grounded)
+        if (!_playerController.Grounded)
             _animator.SetInteger("State", 3);
 
     }

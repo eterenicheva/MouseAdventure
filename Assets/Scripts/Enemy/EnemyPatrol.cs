@@ -6,6 +6,7 @@ public class EnemyPatrol : MonoBehaviour
 {
     [SerializeField] private Transform _path;
     [SerializeField] private float _speed;
+
     private Transform[] _points;
     private int _currentPoint;
 

@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float GravityModifier = 1f;
     public Vector2 Velocity;
     public LayerMask LayerMask;
-    public float Speed;
+    public float MoveSpeed;
 
     protected Vector2 targetVelocity;
     protected bool grounded;
@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     protected const float minMoveDistance = 0.001f;
     protected const float shellRadius = 0.01f;
+
+    public bool Grounded { get{ return grounded; } }
 
     private void OnEnable()
     {
@@ -38,13 +40,13 @@ public class PlayerController : MonoBehaviour
         targetVelocity = new Vector2(Input.GetAxis("Horizontal"), 0);
 
         if (Input.GetKey(KeyCode.Space) && grounded)
-            Velocity.y = 8;
+            Velocity.y = 6;
     }
 
     void FixedUpdate()
     {
         Velocity += GravityModifier * Physics2D.gravity * Time.deltaTime;
-        Velocity.x = targetVelocity.x * Speed;
+        Velocity.x = targetVelocity.x * MoveSpeed;
 
         grounded = false;
 
